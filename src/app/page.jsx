@@ -1,16 +1,38 @@
-import React from 'react'
+"use client"
+
+import Intro from '@/components/intro/Intro';
+import PageOne from '@/components/pageone/PageOne';
+import PageThree from '@/components/pagethree/PageThree';
+import PageTwo from '@/components/pagetwo/PageTwo';
+import React, { useRef, useState } from 'react'
 
 const home = () => {
-  
+  const [level, setLevel] = useState(1);
+  const videoRef = useRef(); 
+
+  const handlePageOneClick = () => {
+    setLevel(2);
+    videoRef.current.play();
+  }
+
+  const handleVideoEnded = () => {
+    setLevel(3);
+  }
+
   return (
-    <div className='flex items-center justify-center w-screen h-screen'>
-      <img src='/PAGE 1 - TEMPLATES/BACKGROUND TEXTURE 1920X1080.png' className='w-full h-full absolute' />
-      <div className="absolute w-full h-full flex items-center justify-center w-screen h-screen">
-        <button className='w-1/4 cursor-pointer'>
-          <img src='/PAGE 1 - TEMPLATES/TRIANGLE.png' className='w-full' />
-        </button>
-      </div>
-    </div>
+    <>
+    <PageOne 
+      level={level} 
+      handlePageOneClick={handlePageOneClick} 
+    />
+    <Intro 
+      videoRef={videoRef} 
+      handleVideoEnded={handleVideoEnded}
+      level={level} 
+    />
+    <PageTwo level={level} setLevel={setLevel} />
+    <PageThree level={level} />
+    </>
   )
 }
 
