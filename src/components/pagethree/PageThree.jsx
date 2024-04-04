@@ -11,6 +11,11 @@ const PageThree = ({level}) => {
             return false
         }
 
+        if(!code.includes("666-")){
+            alert("Code must begin with 666-");
+            return;
+        }
+
         const tweet = `I am now solving the biggest  %23COINSPIRACY %0A%0A Enter my code to join the mystery: ${code} %0A%0A @CoinspiracySOL`;
         const url = `https://twitter.com/intent/tweet?text=${tweet}`
         window.open(url);
