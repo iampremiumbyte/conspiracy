@@ -17,14 +17,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
+      <head>
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@CoinspiracySOL" />
         <meta name="twitter:creator" content="@CoinspiracySOL" />
         <meta name="twitter:title" content="$Coinspiracy" />
         <meta name="twitter:description" content="CoinspiracySOL site" />
         <meta name="twitter:image" content="https://coinspiracy.wtf/twitter.jpg" />
-      </Head>
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );
