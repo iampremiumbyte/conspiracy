@@ -12,7 +12,7 @@ const PageThree = ({level}) => {
             return;
         }
 
-        const tweet = `I am now solving the biggest  %23COINSPIRACY %0A%0A Enter my code to join the mystery: ${ `666-${generateRandomString().toLocaleUpperCase()}`} %0A%0A @CoinspiracySOL`;
+        const tweet = `I am now solving the biggest  %23COINSPIRACY %0A%0A Enter my code to join the mystery: ${ `666-${generateRandomString().toLocaleUpperCase()}`} %0A%0A @CoinspiracySOL %0A%0A https://coinspiracy.wtf`;
         const url = `https://twitter.com/intent/tweet?text=${tweet}`
         window.location.href = url;
 
