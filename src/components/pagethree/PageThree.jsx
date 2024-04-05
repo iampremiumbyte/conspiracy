@@ -1,7 +1,7 @@
 'use client'
 
+import { generateRandomString } from '@/utils/helpers';
 import React, { useState } from 'react'
-
 
 const PageThree = ({level}) => {
     const [code, setCode] = useState("666-");
@@ -16,7 +16,11 @@ const PageThree = ({level}) => {
             return;
         }
 
-        const tweet = `I am now solving the biggest  %23COINSPIRACY %0A%0A Enter my code to join the mystery: ${code} %0A%0A @CoinspiracySOL`;
+        const randomStr = generateRandomString();
+
+        const code = `666-${randomStr}`
+
+        const tweet = `I am now solving the biggest  %23COINSPIRACY %0A%0A Enter my code to join the mystery: ${_code} %0A%0A @CoinspiracySOL`;
         const url = `https://twitter.com/intent/tweet?text=${tweet}`
         window.open(url);
 
