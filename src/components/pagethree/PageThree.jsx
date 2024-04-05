@@ -7,6 +7,11 @@ const PageThree = ({level}) => {
     const [code, setCode] = useState("666-");
 
     const handleSubmit = () => {
+
+        if(code.length !== 7){
+          alert("Enter 3 character codes")
+        }
+
         if(!code.includes("666-")){
             alert("Code must begin with 666-");
             return;
@@ -27,7 +32,7 @@ const PageThree = ({level}) => {
               <input 
                 type="text" 
                 value={code} 
-                maxLength={12}
+                maxLength={7}
                 onInput={e => setCode(e.target.value)}
                 className='absolute w-full h-full top-0 bg-transparent text-black font-black text-center'
                 style={{
