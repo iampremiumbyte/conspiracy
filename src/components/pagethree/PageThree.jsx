@@ -4,7 +4,7 @@ import { generateRandomString } from '@/utils/helpers';
 import React, { useState } from 'react'
 
 const PageThree = ({level}) => {
-    const [code, setCode] = useState("666-");
+    const [code, setCode] = useState("666");
 
     const handleSubmit = () => {
 
