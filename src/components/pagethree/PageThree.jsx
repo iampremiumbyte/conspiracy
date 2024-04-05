@@ -22,7 +22,7 @@ const PageThree = ({level}) => {
       <img src='/PAGE 2 - TEMPLATES/BG-TEXTURE 1920X1080.png' className='w-full h-full absolute' />
       <div className="flex flex-col justify-center items-center gap-6  absolute w-full h-full">
           <img src='/PAGE 2 - TEMPLATES/TRIANGLE.png' className='w-1/2 sm:w-1/5' />
-          <div className="w-full sm:w-1/4 relative">
+          <div className="w-full sm:w-1/3 relative">
               <img src='/PAGE 2 - TEMPLATES/CODESPACE.png' className='w-full cursor-pointer' />
               <input 
                 type="text" 
